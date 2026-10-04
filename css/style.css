@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#first {
+  height: 100vh;
+  width: 100%;
+}
+
+#first .content {
+  padding-top: 6rem;
+  padding-left: 6rem;
+  padding-bottom: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../image/cofeebg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#first h1 {
+  font-size: 9vw;
+  line-height: 19vh;
+  font-family: "Chicle", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  letter-spacing: 5px;
+}
+
+#first h1 span {
+  color: burlywood;
+}
+
+#first .p3 {
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-family: "Life Savers", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --ink: currentColor;
+  --ink-2: #f8f5f6;
+  --ink-3: #4ff8ff;
+}
+
+/* 03 Teletype — typewriter with blinking caret (word must match the ch width) */
+.fx-typewriter {
+  box-sizing: content-box; /* the caret sits outside the character-count width */
+  font:
+    600 24px/1.2 "JetBrains Mono",
+    monospace;
+  letter-spacing: 0;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20ch; /* = number of characters typed */
+  border-right: 0.55ch solid var(--ink-2);
+  animation:
+    fx-type 3.6s steps(10) infinite,
+    fx-caret 0.65s steps(1) infinite;
+}
+@keyframes fx-type {
+  0%,
+  8% {
+    width: 0;
+  }
+  55%,
+  100% {
+    width: 31ch;
+  }
+}
+@keyframes fx-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#first .b-div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+
+#first button {
+  /* background: transparent; */
+  padding: 8px 30px;
+  background-color: burlywood;
+  margin-top: 2rem;
+  border-radius: 5px;
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  box-shadow: 2px 6px 18px grey;
+  transition: all 0.5s ease;
+}
+
+#first .b2 {
+  background: transparent;
+  color: white;
+}
+
+#first button:hover {
+  box-shadow: none;
+  transform: scale(1.2);
+}
+
+/* -------------------------- second -------------------- */
+
+#second .content {
+  padding: 6vh;
+}
+
+#second .p1 {
+  text-align: center;
+  font-family: "Chicle", serif;
+  font-weight: 400;
+  font-size: 3vw;
+  text-shadow: 4px 4px 4px #5555556e;
+}
+
+#second .p2 {
+  text-align: center;
+  font-size: 1.2vw;
+  /* font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal; */
+
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 25px;
+}
+
+#second .card {
+  border: 2px solid grey;
+  height: 50vh;
+  flex: 1;
+  border-radius: 20px;
+  /* overflow: hidden; */
+}
+
+#second .card .img {
+  border-radius: 20px;
+  /* overflow: hidden; */
+}
+
+#second .card .img {
+  height: 30vh;
+  /* border: 2px solid black; */
+  background-image: url(../image/card1.jpg);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+#second .card:hover .img {
+  background-size: 100%;
+  /* transform: scale(1.2); */
+}
+
+#second .card .card-p1 {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+/* -------------- responsive ------------- */
+
+/* ================================
+   TABLET
+   992px AND BELOW
+================================ */
+
+@media (max-width: 991.98px) {
+  #first {
+    height: 50vh;
+  }
+
+  #first .content {
+    height: 50vh;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  #first h1 {
+    font-size: 11vw;
+    line-height: 0.95;
+    letter-spacing: 3px;
+  }
+
+  #first .p3 {
+    font-size: 1.35rem;
+  }
+
+  #first .b-div {
+    gap: 1.5rem;
+  }
+
+  #first button {
+    font-size: 1.2rem;
+    padding: 8px 25px;
+  }
+}
+
+/* ================================
+   MOBILE
+   767px AND BELOW
+================================ */
+
+@media (max-width: 767.98px) {
+  #first {
+    height: 50vh;
+  }
+
+  #first .content {
+    height: 50vh;
+
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+
+    background-position: center;
+  }
+
+  #first h1 {
+    font-size: 16vw;
+    line-height: 0.95;
+    letter-spacing: 2px;
+  }
+
+  #first .p3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  #first .b-div {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #first button {
+    font-size: 1.05rem;
+    padding: 8px 20px;
+    margin-top: 1.5rem;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+   575px AND BELOW
+================================ */
+
+@media (max-width: 575.98px) {
+  #first .content {
+    padding-top: 3rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    background-position: 60% center;
+  }
+
+  #first h1 {
+    font-size: 18vw;
+    line-height: 0.9;
+    letter-spacing: 1px;
+  }
+
+  #first .p3 {
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+  }
+
+  #first .b-div {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  #first button {
+    width: auto;
+    min-width: 160px;
+
+    font-size: 1rem;
+    padding: 9px 20px;
+
+    margin-top: 1.2rem;
+  }
+}
+
+/* ================================
+   VERY SMALL MOBILE
+   400px AND BELOW
+================================ */
+
+@media (max-width: 400px) {
+  #first {
+    height: 40vh;
+  }
+
+  #first .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #first h1 {
+    font-size: 12vw;
+    line-height: 2.8rem;
+  }
+
+  #first .p3 {
+    font-size: 0.6rem;
+  }
+
+  #first button {
+    min-width: 145px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small: below 576px */
+/* @media (max-width: 480px) {
+  #first {
+    min-height: 60vh;
+    width: 100%;
+  }
+
+  #first .content {
+    padding: 3rem 0 6rem 4rem;
+    height: 40vh;
+    width: 100%;
+  }
+
+  #first h1 {
+    line-height: 1rem;
+  }
+
+  #first .p3 {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  #first .b-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  #first button {
+    padding: 5px 20px;
+    width: 30vw;
+    font-size: 3vw;
+    margin-top: 1rem;
+    border-radius: 5px;
+  }
+} */
+
+/* Small: below 768px */
+/* @media (max-width: 768px) {
+  #first {
+    height: 50vh;
+    width: 100%;
+  }
+
+  #first .content {
+    padding: 3rem 0 6rem 4rem;
+    height: 40vh;
+    width: 100%;
+  }
+
+  #first h1 {
+    font-size: 3rem;
+  }
+
+  #first .p3 {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  #first button {
+    padding: 5px 20px;
+    margin-top: 1rem;
+  }
+} */
+
+/* Medium: below 992px */
+/* @media (max-width: 1024px) {
+  #first {
+    height: 50vh;
+    width: 100%;
+  }
+
+  #first .content {
+    padding: 3rem 0 6rem 4rem;
+    height: 40vh;
+    width: 100%;
+  }
+
+  #first h1 {
+    font-size: 3rem;
+  }
+
+  #first .p3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  #first button {
+    padding: 5px 20px;
+    margin-top: 1rem;
+    border-radius: 5px;
+  }
+} */
+
+/* Large: below 1200px */
+/* @media (max-width: 1200px) {
+  #first {
+    height: 50vh;
+    width: 100%;
+  }
+
+  #first .content {
+    padding-top: 3rem;
+    padding-left: 5rem;
+    height: 40vh;
+    width: 100%;
+  }
+
+  #first h1 {
+    font-size: 4rem;
+  }
+
+  #first .p3 {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  #first button {
+    padding: 5px 20px;
+    margin-top: 1rem;
+  }
+} */
+
+/* Extra large: below 1400px */
+/* @media (max-width: 1399.98px) {
+  #first {
+    height: 50vh;
+    width: 100%;
+  }
+
+  #first .content {
+    padding: 3rem 0 6rem 4rem;
+    height: 40vh;
+    width: 100%;
+  }
+
+  #first h1 {
+    font-size: 8vw;
+    line-height: 5rem;
+  }
+
+  #first .p3 {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  #first button {
+    padding: 5px 20px;
+    margin-top: 1rem;
+  }
+} */
